@@ -112,12 +112,12 @@ def get_data_from_token(token: str):
     try:
         a=ui_lock_token_table.find_one({"_id": token})
         if not a:
-            return {"success": False, "message": "token does not exist invalid token"}
+            return {"success": False, "message": "token does not exist invalid token", 'email':a['email']}
 
         if a['used']:
-            return {'success':False,"message":"token has been already used to generate password for the user"}
+            return {'success':False,"message":"token has been already used to generate password for the user", 'email':a['email']}
         if datetime.datetime.now()>a['valid']:
-            return {'success':False,"message":"token has been expired try regenerating new token"}
+            return {'success':False,"message":"token has been expired try regenerating new token", 'email':a['email']}
 
 
 
