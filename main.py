@@ -112,7 +112,7 @@ def get_data_from_token(token: str):
     try:
         a=ui_lock_token_table.find_one({"_id": token})
         if not a:
-            return {"success": False, "message": "token does not exist invalid token", 'email':a['email']}
+            return {"success": False, "message": "token does not exist invalid token"}
 
         if a['used']:
             return {'success':False,"message":"token has been already used to generate password for the user", 'email':a['email']}
@@ -186,6 +186,12 @@ def update_password_via_token(token:str, password:str):
 
 
 
+
+
+
+
+
+# uvicorn api_0301_1629_lock_ui_for_render:app --port 7711
 
 
 
