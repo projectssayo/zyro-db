@@ -192,11 +192,11 @@ def update_password_via_token(token:str, password:str):
 @app.get("/")
 def info():
     return {
-        "/set_ui_lock_password" : 'http://127.0.0.1:7711/set_ui_lock_password?email=suyognegi1@gmail.com&password=123',
-        "/get_pfp":'http://127.0.0.1:7711/get_pfp?email=suyognegi1@gmail.com',
-        "/generate_token":'http://127.0.0.1:7711/generate_token?email=suyognegi1@gmail.com',
-        "/get_data_from_token":'http://127.0.0.1:7711/get_data_from_token?token=1aOf3c29YGAe9GZff5cd3aeaIYYZY5afI3eZ2SXG2Zd7Yabc1Z9G3e2AOaca3aYX',
-        "/update_password_via_token":'http://127.0.0.1:7711/update_password_via_token?token=1aOf3c29YGAe9GZff5cd3aeaIYYZY5afI3eZ2SXG2Zd7Yabc1Z9G3e2AOaca3aYX&password=my_pass123',
+        "/set_ui_lock_password" : 'https://zyro-db.onrender.com//set_ui_lock_password?email=suyognegi1@gmail.com&password=123',
+        "/get_pfp":'https://zyro-db.onrender.com//get_pfp?email=suyognegi1@gmail.com',
+        "/generate_token":'https://zyro-db.onrender.com//generate_token?email=suyognegi1@gmail.com',
+        "/get_data_from_token":'https://zyro-db.onrender.com//get_data_from_token?token=1aOf3c29YGAe9GZff5cd3aeaIYYZY5afI3eZ2SXG2Zd7Yabc1Z9G3e2AOaca3aYX',
+        "/update_password_via_token":'https://zyro-db.onrender.com//update_password_via_token?token=1aOf3c29YGAe9GZff5cd3aeaIYYZY5afI3eZ2SXG2Zd7Yabc1Z9G3e2AOaca3aYX&password=my_pass123',
 
     }
 
